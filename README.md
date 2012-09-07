@@ -20,4 +20,3 @@ or compile the project using ANT Compile and run
 
 
 Karthikeyan.R
-karthikeyaneie.kln@gmail.com
