@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GameofLife" default="jar">
+	<target name="clean" description="cleanup all">
+		<delete dir="${project.classes.location}" verbose="true" quiet="false" failonerror="true" />
+		<delete file="${project.manifest.file}" failonerror="true" /> 
+	</target>    
+	<target name="compile" depends="clean">
+    	<javac includeantruntime = "false" srcdir="src" />
+  	</target>
+	<target name="jar" depends="compile">
+		 <jar destfile="gameoflife.jar"
+		      basedir="."
+		      includes="*src/*.class">
+		   <manifest>		   		
+           		<attribute name="Main-Class" value="com.game.GameofLife"/>
+           		<attribute name="Class-Path" value="."/>           		
+		   </manifest>
+		   <fileset dir="C:/D/KartiK/Java/Java_Program/GameOfLife/bin"/>
+		 </jar>
+	</target>
+</project>
